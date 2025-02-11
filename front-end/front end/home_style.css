@@ -1,0 +1,172 @@
+body {
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #111;
+    border-bottom: 1px solid white;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.genres {
+    margin-right: 50px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-genres {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: black;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+    border-radius: 5px;
+}
+
+.dropdown-genres a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-genres a:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-genres {
+    display: block;
+}
+
+.picture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.home-picture {
+    width: 40%;
+    height: auto;
+}
+
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; 
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 2%;
+
+
+}
+
+.slider-image {
+    position: absolute;
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-image.active {
+    opacity: 1;
+}
+
+.movie-section {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 200px;
+}
+.movie-question {
+    font-size: 24px;
+    margin-bottom: 10%;
+
+}
+.recommendation-btn {
+    background-color: #FFDCB4;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    margin-bottom: 10%;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+.recommendation-btn:hover {
+    background-color: #f5b060;
+}
+
+#scrollToBottomBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#scrollToBottomBtn:hover {
+    background-color: white;
+}

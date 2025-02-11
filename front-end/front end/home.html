@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineaste's</title>
+
+    <link rel="stylesheet" href="home_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="nav-bar">
+        <img class="logo" src="pictures\logo.png">
+
+        <div class="nav-buttons">
+            <a class="recos" href="#">Recomendations</a>
+            
+            <div class="dropdown">
+                <a class="genres">Genres</a>
+                <div class="dropdown-genres">
+
+                    <a href="#">Action</a>
+                    <a href="#">Comedy</a>
+                    <a href="#">Drama</a>
+                    <a href="#">Thriller</a>
+                    <a href="#">Adventure</a>
+                    <a href="#">Romance</a>
+                    <a href="#">Crime</a>
+                    <a href="#">Science Fiction</a>
+                    <a href="#">Fantasy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="picture-container">
+        <img class="home-picture" src="pictures\home.png">
+    </div>
+
+    <div class="slider-container">
+        <img class="slider-image" src="pictures/movie 1.jpg">
+        <img class="slider-image" src="pictures/movie 2.jpg">
+        <img class="slider-image" src="pictures/movie 3.jpg">
+    </div>
+    
+    <script>
+        let index = 0;
+        const images = document.querySelectorAll('.slider-image');
+    
+        function showNextImage() {
+            images[index].classList.remove('active');
+            index = (index + 1) % images.length;
+            images[index].classList.add('active');
+        }
+    
+        images[index].classList.add('active');
+    
+        setInterval(showNextImage, 3000);
+    </script>
+    
+    <div class="movie-section">
+        <p class="movie-question">Are You Ready to Find Your New Favorite Movie?</p>
+        <button class="recommendation-btn">Recommendations</button>
+    </div>
+
+    <button id="scrollToBottomBtn">⬇</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollToBottomBtn = document.getElementById("scrollToBottomBtn");
+    
+            if (!scrollToBottomBtn) return; 
+    
+            function checkScrollPosition() {
+                const scrollPosition = window.scrollY;
+                const documentHeight = document.documentElement.scrollHeight;
+                const windowHeight = window.innerHeight;
+    
+                scrollToBottomBtn.style.display = (scrollPosition + windowHeight >= documentHeight - 5) ? "none" : "block";
+            }
+    
+            setTimeout(checkScrollPosition, 100);
+    
+            window.addEventListener("scroll", checkScrollPosition);
+
+            scrollToBottomBtn.addEventListener("click", function () {
+                window.scrollTo({
+                    top: document.documentElement.scrollHeight,
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>    
+
+</body>
+</html>

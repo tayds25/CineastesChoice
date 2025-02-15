@@ -20,12 +20,12 @@ This project is developed as part of our Application Development and Emerging Te
 
 ## Development
 
-To run tests for the front end, clone the repository and run the command
+To run tests for the front end, clone the repository and run the command inside the terminal of VS Code:
 
 ```bash
   cd front-end
 ```
-Then, run the following
+Then, run the following to open the website:
 
 ```bash
   npm run dev

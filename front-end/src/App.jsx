@@ -1,20 +1,15 @@
-import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Login from './pages/login.jsx'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-900">
-      {/* Navbar */}
-      <nav className="bg-gray-800 p-4">
-        <div className="container mx-auto">
-          <h1 className="text-2xl font-bold text-white">Movie Recommendation System</h1>
-        </div>
-      </nav>
-
-      {/* Main Content Area */}
-      <div className="container mx-auto px-4 py-8">
-        {/* Content will go here */}
+    <Router>
+      <div className="min-h-screen bg-[#1e201e]">
+        <Routes>
+          <Route path="/" element={<Login />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   )
 }
 

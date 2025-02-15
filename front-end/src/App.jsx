@@ -5,10 +5,11 @@ import Home from './pages/home.jsx'
 import Genres from './pages/genres.jsx'
 import Navbar from './components/navbar.jsx'
 import Recommendation from './pages/recommendation.jsx'
+import QuizGenre from './pages/quiz_genre.jsx'
 
 function AppContent() {
   const location = useLocation()
-  const showNavbarPaths = ['/home', '/genres', '/recommendation']
+  const showNavbarPaths = ['/home', '/genres', '/recommendation', '/quiz_genre']
   const shouldShowNavbar = showNavbarPaths.includes(location.pathname)
 
   return (
@@ -20,6 +21,7 @@ function AppContent() {
         <Route path="/home" element={<Home />} />
         <Route path="/recommendation" element={<Recommendation />} />
         <Route path="/genres" element={<Genres />} />
+        <Route path="/quiz_genre" element={<QuizGenre />} />
       </Routes>
     </div>
   )

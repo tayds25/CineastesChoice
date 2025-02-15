@@ -1,7 +1,21 @@
 function QuizGenre() {
     return (
         <div>
-            <h2>Quiz Genre Page</h2>
+            {/* TITLE */}
+            <div>
+                <img
+                    src="src/assets/Title.png"
+                    alt="Logo"
+                    className="w-auto h-[15rem] mx-auto"
+                />
+
+                <h2 className="text-3xl text-center font-bold mt-4 text-white pt-9">
+                    Select a genre/s
+                </h2>
+            </div>
+
+            
+            
         </div>
     )
 }

@@ -4,10 +4,11 @@ import Register from './pages/register.jsx'
 import Home from './pages/home.jsx'
 import Genres from './pages/genres.jsx'
 import Navbar from './components/navbar.jsx'
+import Recommendation from './pages/recommendation.jsx'
 
 function AppContent() {
   const location = useLocation()
-  const showNavbarPaths = ['/home', '/genres']
+  const showNavbarPaths = ['/home', '/genres', '/recommendation']
   const shouldShowNavbar = showNavbarPaths.includes(location.pathname)
 
   return (
@@ -17,6 +18,7 @@ function AppContent() {
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/recommendation" element={<Recommendation />} />
         <Route path="/genres" element={<Genres />} />
       </Routes>
     </div>

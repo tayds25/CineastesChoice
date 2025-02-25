@@ -1,12 +1,16 @@
-import { useState } from 'react'
+import React from 'react';
+import Chatbot from './Chatbot';
 
+const Recommendations = () => {
+  return (
+    <div className="recommendations-page">
+      <h1>Recommendations</h1>
+      <p>Here are some recommendations based on your preferences.</p>
 
-const Recommendation = () => {
-    return (
-        <div>
-            <h1>Recommendation</h1>
-        </div>
-    )
-}
+      {/* Add the chatbot component */}
+      <Chatbot />
+    </div>
+  );
+};
 
-export default Recommendation
+export default Recommendations;

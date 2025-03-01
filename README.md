@@ -1,9 +1,10 @@
-
 # Movie Recommendation Application using a Content-Based Filtering AI System
 
 This project is a Personalized Movie Recommendation Application that uses a Content-Based Filtering AI System to suggest movies tailored to individual user preferences. The application analyzes movie attributes such as genre, cast, director, and plot to provide recommendations based on user input or viewing history.
 
 This project is developed as part of our Application Development and Emerging Technologies Course.
+
+
 ## Creators
 
 - DE AUSTRIA, Mars Andrei
@@ -20,12 +21,40 @@ This project is developed as part of our Application Development and Emerging Te
 
 ## Development
 
-To run tests for the front end, clone the repository and run the command inside the terminal of VS Code:
+1. Clone the repository
+```bash
+git clone [repo-url]
+cd CineastesChoice
+```
+
+2. Create and activate virtual environment
+```bash
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+3. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+4. Start the Flask server
+```bash
+cd backend
+python app.py
+```
+
+The server will run at `http://localhost:5000`
+
+- SQLite database will be created at `backend/instance/users.db`
+
+5. Open a new terminal and start the front end:
 
 ```bash
   cd front-end
 ```
-Then, run the following to open the website:
+
+6. Open the website:
 
 ```bash
   npm run dev

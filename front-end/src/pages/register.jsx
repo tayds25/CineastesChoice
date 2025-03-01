@@ -8,20 +8,48 @@ const Register = () => {
         password: '',
         confirmPassword: '',
     });
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
+        setError('');
 
         if (credentials.password !== credentials.confirmPassword) {
-            alert('Passwords do not match');
+            setError('Passwords do not match');
+            setLoading(false);
             return;
         }
 
         try {
-            navigate('/home');
+            const response = await fetch('http://localhost:5000/api/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: credentials.name,
+                    email: credentials.email,
+                    password: credentials.password
+                }),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Registration failed');
+            }
+
+            // Registration successful
+            alert('Registration successful! Please log in.');
+            navigate('/login');
         } catch (error) {
+            setError(error.message);
             console.error('Registration failed:', error);
+        } finally {
+            setLoading(false);
         }
     };
 

@@ -16,9 +16,9 @@ function AppContent() {
     <div className="min-h-screen bg-[#1e201e]">
       {shouldShowNavbar && <Navbar />}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/recommendation" element={<Recommendation />} />
         <Route path="/genres" element={<Genres />} />
         <Route path="/quiz_genre" element={<QuizGenre />} />

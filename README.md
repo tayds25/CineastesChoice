@@ -1,6 +1,6 @@
-# Movie Recommendation Application using a Content-Based Filtering AI System
+# Cineaste's Choice
 
-This project is a Personalized Movie Recommendation Application that uses a Content-Based Filtering AI System to suggest movies tailored to individual user preferences. The application analyzes movie attributes such as genre, cast, director, and plot to provide recommendations based on user input or viewing history.
+This project is a Personalized Movie Recommendation Application that uses Google's Gemini API to suggest movies tailored to individual user preferences. The application analyzes movie attributes such as genre, cast, director, and plot to provide recommendations based on user input.
 
 This project is developed as part of our Application Development and Emerging Technologies Course.
 
@@ -29,7 +29,7 @@ cd CineastesChoice
 
 2. Create and activate the virtual environment
 ```bash
-cd backend
+cd back-end
 python -m venv venv
 .\venv\Scripts\activate
 ```
@@ -48,13 +48,13 @@ The server will run at `http://localhost:5000`
 
 - SQLite database will be created at `back-end\instance\users.db`
 
-5. Open a new terminal and navigate to the front end:
+5. Open a new terminal and navigate to the front end
 
 ```bash
   cd front-end
 ```
 
-6. Open the website:
+6. Open the website
 
 ```bash
   npm run dev

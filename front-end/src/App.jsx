@@ -5,7 +5,6 @@ import Home from './pages/home.jsx'
 import Genres from './pages/genres.jsx'
 import Navbar from './components/navbar.jsx'
 import Recommendation from './pages/recommendation.jsx'
-import QuizGenre from './pages/quiz_genre.jsx'
 
 function AppContent() {
   const location = useLocation()
@@ -21,7 +20,6 @@ function AppContent() {
         <Route path="/home" element={<Home />} />
         <Route path="/recommendation" element={<Recommendation />} />
         <Route path="/genres" element={<Genres />} />
-        <Route path="/quiz_genre" element={<QuizGenre />} />
       </Routes>
     </div>
   )

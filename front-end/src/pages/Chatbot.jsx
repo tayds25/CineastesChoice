@@ -17,8 +17,7 @@ const Chatbot = () => {
         `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyARLnirUAq8gxsKX6QJI8_1yTvaojaneSo`,
         {
           contents: [
-            { role: 'user', parts: [{ text: userInput }] },
-            { role: 'model', parts: [{ text: 'You are a movie recommendation chatbot. Your purpose is to recommend movies, discuss movie genres, actors, directors, and other movie-related topics. If the user asks about something unrelated to movies, politely respond that you can only talk about movies.' }] }
+            { role: 'user', parts: [{ text: `You are a movie recommendation chatbot. Your purpose is to recommend movies, discuss movie genres, actors, directors, and other movie-related topics. If the user asks about something unrelated to movies, politely respond that you can only talk about movies. User: ${userInput}` }] },
           ],
         },
         { headers: { 'Content-Type': 'application/json' } }

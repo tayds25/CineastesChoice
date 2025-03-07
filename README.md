@@ -44,17 +44,23 @@ pip install -r requirements.txt
 python app.py
 ```
 
+5. Open new terminal and navigate to back-end
+```bash
+cd back-end
+python movie.py
+```
+
 The server will run at `http://localhost:5000`
 
 - SQLite database will be created at `back-end\instance\users.db`
 
-5. Open a new terminal and navigate to the front end
+6. Open a new terminal and navigate to the front end
 
 ```bash
   cd front-end
 ```
 
-6. Open the website
+7. Open the website
 
 ```bash
   npm run dev

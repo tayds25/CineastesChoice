@@ -47,7 +47,7 @@ python app.py
 5. Open new terminal and navigate to back-end
 ```bash
 cd back-end
-python movie.py
+python movies.py
 ```
 
 The server will run at `http://localhost:5000`

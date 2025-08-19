@@ -4,6 +4,7 @@ This project is a Personalized Movie Recommendation Application that uses Google
 
 This project is developed as part of our Application Development and Emerging Technologies Course.
 
+[![Home](cineaste_home.png)](cineaste_home.png)
 
 ## Creators
 
